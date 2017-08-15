@@ -5,7 +5,7 @@
 [![go report card][badge:grc]][www:grc]
 
 Mainflux message writer consumes channel events published on message broker,
-and stores them into the database. 
+and stores them into the database.
 
 ## Configuration
 
@@ -13,10 +13,10 @@ The service is configured using the environment variables presented in the
 following table. Note that any unset variables will be replaced with their
 default values.
 
-| Variable           | Description                              | Default   |
-|--------------------|------------------------------------------|-----------|
-| WRITER_DB_CLUSTER  | comma-separated Cassandra contact points | 127.0.0.1 |
-| WRITER_DB_KEYSPACE | name of the Cassandra keyspace           | manager   |
+| Variable                   | Description                              | Default          |
+|----------------------------|------------------------------------------|------------------|
+| MESSAGE_WRITER_DB_CLUSTER  | comma-separated Cassandra contact points | 127.0.0.1        |
+| MESSAGE_WRITER_DB_KEYSPACE | name of the Cassandra keyspace           | message_writer   |
 
 ## Deployment
 
@@ -40,15 +40,15 @@ services:
     ports:
       - [host machine port]:8180
     environment:
-      WRITER_DB_CLUSTER: [comma-separated Cassandra endpoints]
-      WRITER_DB_KEYSPACE: [name of Cassandra keyspace]
+      MESSAGE_WRITER_DB_CLUSTER: [comma-separated Cassandra endpoints]
+      MESSAGE_WRITER_DB_KEYSPACE: [name of Cassandra keyspace]
 ```
 
 Alternatively, the service can be used outside of the container. Execute the
 following command to download the latest version of the service:
 
 ```bash
-go get github.com/mainflux/message-writer  
+go get github.com/mainflux/message-writer
 ```
 
 Once downloaded, the code can be compiled, installed to `$GOBIN` and executed

@@ -1,5 +1,5 @@
-hash: 9a062a834b4e5df350de30c2be98427f2fc92c2d917cd40c5bfd6b28b58db01d
-updated: 2017-08-15T16:10:32.954443174+02:00
+hash: f6e4d129cfda17ac347f2724f10f7917285a164b763fd4f6d12710b6c8d61f5f
+updated: 2017-08-16T14:17:17.708417228+02:00
 imports:
 - name: github.com/gocql/gocql
   version: 88748c7b290d13b288055f5dea4d1c49d44db06d
@@ -13,6 +13,24 @@ imports:
   version: e80d13ce29ede4452c43dea11e79b9bc8a15b478
 - name: github.com/nats-io/go-nats
   version: 61923ed1eaf8398000991fbbee2ef11ab5a5be0d
+- name: github.com/nats-io/nats
+  version: b4479c874d87db74c2049a1b4abd55eb162c70fb
+  subpackages:
+  - encoders/builtin
+  - util
+- name: github.com/nats-io/nuid
+  version: 3cf34f9fca4e88afa9da8eabd75e3326c9941b44
+- name: github.com/sirupsen/logrus
+  version: f006c2ac4710855cf0f916dd6b77acf6b048dc6e
+- name: golang.org/x/crypto
+  version: b176d7def5d71bdd214203491f89843ed217f420
+  subpackages:
+  - ssh/terminal
+- name: golang.org/x/sys
+  version: 9f7170bcd8e9f4d3691c06401119c46a769a1e03
+  subpackages:
+  - unix
+  - windows
 - name: gopkg.in/inf.v0
   version: 3887ee99ecf07df5b447e9b00d9c0b2adaa9f3e4
 testImports: []

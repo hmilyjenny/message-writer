@@ -4,3 +4,5 @@ import:
   - package: github.com/gocql/gocql
   - package: github.com/nats-io/go-nats
     version: ~1.2.x
+  - package: github.com/sirupsen/logrus
+    version: ~1.0.x
